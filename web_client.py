@@ -53,7 +53,7 @@ class HTTPClient:
         except Exception as e:
             if 'timed out' in str(e):
                 # Timeout, meaning nothing else is being received from server
-                print(e)
+                pass
             else:
                 print(e)
 
