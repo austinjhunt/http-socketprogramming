@@ -1,0 +1,16 @@
+HTTP/1.1 404 Not Found
+Date: Fri, 22 Oct 2021 02:00:21 GMT
+Server: Apache/2.2.34 (Amazon)
+Content-Length: 306
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /test_cs5283_bad.html was not found on this server.</p>
+<hr>
+<address>Apache/2.2.34 (Amazon) Server at www.taylortjohnson.com Port 80</address>
+</body></html>
