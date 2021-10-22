@@ -1,4 +1,4 @@
-# Vanderbilt University CS 5283 Programming Assignment 2
+# Vanderbilt University CS 5283 Programming Assignment 1
 ## Creating an HTTP/1.1 Client and Server using Socket Programming
 
 ### [web_server.py](web_server.py) is the HTTP server module. The HTTP Server supports **GET** and **HEAD** requests, and responds to all other HTTP methods with a **[501 Not Implemented](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501) response**. The server includes the following HTTP headers in both HEAD and GET responses:
