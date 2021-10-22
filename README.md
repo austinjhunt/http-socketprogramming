@@ -1,7 +1,7 @@
 # Vanderbilt University CS 5283 Programming Assignment 2
 ## Creating an HTTP/1.1 Client and Server using Socket Programming
 
-[web_server.py](web_server.py) is the HTTP server module. The HTTP Server supports **GET** and **HEAD** requests, and responds to all other HTTP methods with a **[501 Not Implemented](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501) response**. The server includes the following HTTP headers in both HEAD and GET responses:
+### [web_server.py](web_server.py) is the HTTP server module. The HTTP Server supports **GET** and **HEAD** requests, and responds to all other HTTP methods with a **[501 Not Implemented](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501) response**. The server includes the following HTTP headers in both HEAD and GET responses:
 ```
 Date: <>
 Server: <>
@@ -22,7 +22,8 @@ python web_server.py 8080 .
 ```
 will start a web server that listens indefinitely for client connections on port 80, and serves files from the current folder (the root folder of the project). So if a client requests /path/to/some/file, the web server will look for that path starting at the root of this project.
 
-[web_client.py](web_client.py) is the HTTP client module. The client, when run, will connect to the specified host on a specified port and request a specified path using a specified HTTP method. The default port is 80 if unspecified, the default path is `/` if unspecified, which maps to `/index.html` on the server side, and the default HTTP method is GET if unspecified.
+### [web_client.py](web_client.py)
+This is the HTTP client module. The client, when run, will connect to the specified host on a specified port and request a specified path using a specified HTTP method. The default port is 80 if unspecified, the default path is `/` if unspecified, which maps to `/index.html` on the server side, and the default HTTP method is GET if unspecified.
 
 The client supports large file transfers, demonstrated with [screenshots/200-largefile-cli.png](screenshots/200-largefile-cli.png). Basically, if requesting a large file, the client accepts chunks of that file in a loop until there is nothing else to receive, each time appending the newest chunk to a full response.
 
@@ -63,3 +64,16 @@ python web_client.py localhost:8080/index.html HEAD
 python web_client.py localhost:8080/NONEXISTENTFILE.html HEAD
 
 ```
+
+### Submission Requirements
+1) Your client and server source files (and any others needed):
+   1) [client](web_client.py)
+   2) [server](web_server.py)
+2) A screenshot of the client and server execution for a successful file found,
+   1) ![successful file found (200) screenshot](screenshots/200-cli.png)
+3) A screenshot of the client and server execution for an unsuccessful file not found (404)
+   1) ![unsuccessful, file not found (404) screenshot](screenshots/404-cli.png)
+4) A screenshot accessing your web server with a large file from a standard browser
+   1) ![accessing web server with large file from standard browser screenshot](screenshots/200-largefile-browser.png)
+5) A screenshot of an unsuccessful request to web server/file not found from standard browser
+   1) ![404 standard browser request screenshot](screenshots/404-browser.png)
